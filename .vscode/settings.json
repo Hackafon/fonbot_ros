@@ -1,0 +1,10 @@
+{
+    "python.autoComplete.extraPaths": [
+        "S:\\Dev\\miniforge\\envs\\ros_env\\Library\\lib/site-packages",
+        "S:/Dev/miniforge/envs/ros_env\\Lib\\site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "S:\\Dev\\miniforge\\envs\\ros_env\\Library\\lib/site-packages",
+        "S:/Dev/miniforge/envs/ros_env\\Lib\\site-packages"
+    ]
+}

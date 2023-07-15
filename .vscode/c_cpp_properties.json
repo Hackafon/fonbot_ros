@@ -1,0 +1,15 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "S:\\Dev\\miniforge\\envs\\ros_env\\Library\\include\\**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
