@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+    <xacro:include filename="inertia_macros.xacro"/>
+
     <material name="white">
         <color rgba="1 1 1 1" />
     </material>
@@ -17,60 +19,280 @@
         <color rgba="0 0 0 1" />
     </material>
 
-    <!-- BASE LINK -->
+    <!-- BASE -->
+
     <link name="base_link">
     </link>
 
-    <!-- CHASSIS LINK -->
+    <!-- CHASSIS -->
+
     <joint name="chassis_joint" type="fixed" >
         <parent link="base_link" />
         <child link="chassis" />
-        <origin xyz="-0.1 0 0" />
+        <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
     </joint>
 
     <link name="chassis">
         <visual>
-            <origin xyz="0.15 0 0.075"/>
+            <origin xyz="0 0.02 0.095"/>
             <geometry>
-                <box size="0.3 0.3 0.15"/>
+                <mesh filename="package://fonbot_package/models/chassis2.dae" scale="0.4 0.2 0.2"/>
             </geometry>
             <material name="white" />
         </visual>
+        <collision>
+            <origin xyz="0 0.02 0.095"/>
+            <geometry>
+                <mesh filename="package://fonbot_package/models/chassis2.dae" scale="0.4 0.2 0.2"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.5" x="0.4" y="0.4" z="0.2">
+            <origin xyz="0 0.02 0.095" rpy="0 0 0"/>
+        </xacro:inertial_box>
     </link>
 
-    <!-- LEFT WHEEL LINK -->
+    <!-- LEFT TRACK -->
 
-    <joint name="left_wheel_joint" type="fixed">
+    <joint name="left_track_joint" type="fixed">
         <parent link="base_link"/>
-        <child link="left_wheel"/>
-        <origin xyz="0.05 0.175 0.075" rpy="0 0 ${pi/2}"/>
+        <child link="left_track"/>
+        <origin xyz="0 0.175 0.075" rpy="0 0 ${pi/2}"/>
         <axis xyz="-1 0 0" />
     </joint>
 
-    <link name="left_wheel">
+    <link name="left_track">
         <visual>
             <geometry>
-                <mesh filename="package://fonbot_package/models/tank_tracks.dae" scale="0.2 0.2 0.2"/>
+                <mesh filename="package://fonbot_package/models/tank-track-asym.dae" scale="0.2 0.2 0.2"/>
             </geometry>
             <material name="blue"/>  
         </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://fonbot_package/models/tank-track-asym.dae" scale="0.2 0.2 0.2"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.1" x="0.1" y="0.4" z="0.15">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_box>
     </link>
 
-    <!-- RIGHT WHEEL LINK -->
+    <!-- LEFT TRACK WHEELS -->
+    <joint name="left_track_large_wheel_joint" type="continuous">
+        <parent link="left_track"/>
+        <child link="large_wheel_left"/>
+        <origin xyz="0 0.095 0.03"/>
+        <axis xyz="-1 0 0"/>
+    </joint>
 
-    <joint name="right_wheel_joint" type="fixed">
+    <link name="large_wheel_left">
+        <visual>
+            <geometry>
+                <mesh filename="package://fonbot_package/models/tank-wheel.dae" scale="0.32 0.32 0.32"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://fonbot_package/models/tank-wheel.dae" scale="0.32 0.32 0.32"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="0.1" length="0.05" radius="0.1">
+            <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
+        </xacro:inertial_cylinder>
+    </link>
+
+    <joint name="left_track_small_wheel_joint" type="continuous">
+        <parent link="left_track"/>
+        <child link="small_wheel_left"/>
+        <origin xyz="0 -0.13 0"/>
+        <axis xyz="-1 0 0"/>
+    </joint>
+
+    <link name="small_wheel_left">
+        <visual>
+            <geometry>
+                <mesh filename="package://fonbot_package/models/tank-wheel.dae" scale="0.2 0.2 0.2"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://fonbot_package/models/tank-wheel.dae" scale="0.2 0.2 0.2"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="0.05" length="0.05" radius="0.05">
+            <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
+        </xacro:inertial_cylinder>
+    </link>
+
+    <!-- RIGHT TRACK -->
+
+    <joint name="right_track_joint" type="fixed">
         <parent link="base_link"/>
-        <child link="right_wheel"/>
-        <origin xyz="0.05 -0.175 0.075" rpy="0 0 -${pi/2}" />
+        <child link="right_track"/>
+        <origin xyz="0 -0.175 0.075" rpy="0 0 ${pi/2}" />
         <axis xyz="0 0 -1" />
     </joint>
 
-    <link name="right_wheel">
+    <link name="right_track">
         <visual>
             <geometry>
-                <mesh filename="package://fonbot_package/models/tank_tracks.dae" scale="0.2 0.2 0.2"/>
+                <mesh filename="package://fonbot_package/models/tank-track-asym.dae" scale="0.2 0.2 0.2"/>
             </geometry>
-            <material name="blue"/>  
         </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://fonbot_package/models/tank-track-asym.dae" scale="0.2 0.2 0.2"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.1" x="0.1" y="0.4" z="0.15">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_box>
     </link>
+
+    <!-- RIGHT TRACK WHEELS -->
+    <joint name="right_track_large_wheel_joint" type="continuous">
+        <parent link="right_track"/>
+        <child link="large_wheel_right"/>
+        <origin xyz="0 0.095 0.03" rpy="0 0 ${pi}"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <link name="large_wheel_right">
+        <visual>
+            <geometry>
+                <mesh filename="package://fonbot_package/models/tank-wheel.dae" scale="0.32 0.32 0.32"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://fonbot_package/models/tank-wheel.dae" scale="0.32 0.32 0.32"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="0.1" length="0.05" radius="0.1">
+            <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
+        </xacro:inertial_cylinder>
+    </link>
+
+    <joint name="right_track_small_wheel_joint" type="continuous">
+        <parent link="right_track"/>
+        <child link="small_wheel_right"/>
+        <origin xyz="0 -0.13 0" rpy="0 0 ${pi}"/>
+        <axis xyz="1 0 0"/>
+    </joint>
+
+    <link name="small_wheel_right">
+        <visual>
+            <geometry>
+                <mesh filename="package://fonbot_package/models/tank-wheel.dae" scale="0.2 0.2 0.2"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="package://fonbot_package/models/tank-wheel.dae" scale="0.2 0.2 0.2"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="0.1" length="0.05" radius="0.05">
+            <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
+        </xacro:inertial_cylinder>
+    </link>
+
+    <!-- HEAD ARM -->
+    <joint name="chassis_connector_joint" type="fixed">
+        <parent link="chassis" />
+        <child link="chassis_connector" />
+        <origin xyz="0 0.125 0.225" />
+    </joint>
+
+    <link name="chassis_connector">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.05" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.01" length="0.05" />
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="0.01" length="0.05" radius="0.01">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </xacro:inertial_cylinder>
+    </link>
+
+    <joint name="head_rotation_point_joint" type="fixed">
+        <parent link="chassis_connector"/>
+        <child link="head_rotation_point"/>
+        <origin xyz="0 0 0.025" rpy="0.0 0.0 0.0"/>
+    </joint>
+    
+    <link name="head_rotation_point">
+        <visual>
+            <geometry>
+                <sphere radius="0.015"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.015"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_sphere mass="0.01" radius="0.015">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </xacro:inertial_sphere>
+    </link>
+
+    <joint name="head_connector_joint" type="revolute">
+        <parent link="head_rotation_point" />
+        <child link="head_connector" />
+        <origin xyz="0 0 0.0075" />
+        <limit effort="1000.0" lower="0.0" upper="${4*pi/7}" velocity="0.5"/>
+        <axis xyz="-1 0 0"/>
+    </joint>
+
+    <link name="head_connector">
+        <visual>
+            <origin xyz="0 0 0.025"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.05" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.025"/>
+            <geometry>
+                <cylinder radius="0.01" length="0.05" />
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="0.01" length="0.05" radius="0.01">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+        </xacro:inertial_cylinder>
+    </link>
+
+    <!-- HEAD -->
+
+    <joint name="head_joint" type="fixed">
+        <parent link="head_connector"/>
+        <child link="head"/>
+        <origin xyz="0 0 0.05" rpy="${pi/2} 0 0"/>
+    </joint>
+
+    <link name="head">
+        <visual>
+            <origin xyz="0 0.05 0"/>
+            <geometry>
+                <mesh filename="package://fonbot_package/models/head.dae" scale="0.2 0.2 0.2"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0.05 0"/>
+            <geometry>
+                <mesh filename="package://fonbot_package/models/head.dae" scale="0.2 0.2 0.2"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.01" x="0.2" y="0.08" z="0.2">
+            <origin xyz="0 0.05 0" rpy="0 0 0" />
+        </xacro:inertial_box>
+    </link>
+
 </robot>

@@ -1,0 +1,48 @@
+[0.171s] Invoking command in 'S:\Dev\fonbot_ws\src\fonbot_package\build\fonbot_package': CMAKE_PREFIX_PATH=%CMAKE_PREFIX_PATH%;S:\Dev\fonbot_ws\install\joint_state_publisher_gui;S:\Dev\fonbot_ws\install\joint_state_publisher;S:\Dev\miniforge\envs\ros_env\Library CONDA_PROMPT_MODIFIER=(ros_env) S:\Dev\miniforge\envs\ros_env\Library\bin\cmake.EXE S:\Dev\fonbot_ws\src\fonbot_package -DCMAKE_INSTALL_PREFIX=S:\Dev\fonbot_ws\src\fonbot_package\install\fonbot_package
+[0.234s] -- Selecting Windows SDK version 10.0.22000.0 to target Windows 10.0.18363.
+[0.281s] -- Found ament_cmake: 1.3.3 (S:/Dev/miniforge/envs/ros_env/Library/share/ament_cmake/cmake)
+[1.078s] -- Found ament_lint_auto: 0.12.5 (S:/Dev/miniforge/envs/ros_env/Library/share/ament_lint_auto/cmake)
+[1.703s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.703s] -- Configured cppcheck include dirs: 
+[1.703s] -- Configured cppcheck exclude dirs and/or files: 
+[1.734s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.750s] -- Added test 'lint_cmake' to check CMake code style
+[1.765s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.843s] -- Added test 'uncrustify' to check C / C++ code style
+[1.843s] -- Configured uncrustify additional arguments: 
+[1.843s] -- Added test 'xmllint' to check XML markup files
+[1.875s] -- Configuring done (1.7s)
+[2.265s] -- Generating done (0.4s)
+[2.312s] -- Build files have been written to: S:/Dev/fonbot_ws/src/fonbot_package/build/fonbot_package
+[2.328s] Invoked command in 'S:\Dev\fonbot_ws\src\fonbot_package\build\fonbot_package' returned '0': CMAKE_PREFIX_PATH=%CMAKE_PREFIX_PATH%;S:\Dev\fonbot_ws\install\joint_state_publisher_gui;S:\Dev\fonbot_ws\install\joint_state_publisher;S:\Dev\miniforge\envs\ros_env\Library CONDA_PROMPT_MODIFIER=(ros_env) S:\Dev\miniforge\envs\ros_env\Library\bin\cmake.EXE S:\Dev\fonbot_ws\src\fonbot_package -DCMAKE_INSTALL_PREFIX=S:\Dev\fonbot_ws\src\fonbot_package\install\fonbot_package
+[2.343s] Invoking command in 'S:\Dev\fonbot_ws\src\fonbot_package\build\fonbot_package': CL=/MP CMAKE_PREFIX_PATH=%CMAKE_PREFIX_PATH%;S:\Dev\fonbot_ws\install\joint_state_publisher_gui;S:\Dev\fonbot_ws\install\joint_state_publisher;S:\Dev\miniforge\envs\ros_env\Library CONDA_PROMPT_MODIFIER=(ros_env) S:\Dev\miniforge\envs\ros_env\Library\bin\cmake.EXE --build S:\Dev\fonbot_ws\src\fonbot_package\build\fonbot_package --config Release
+[2.578s] MSBuild version 17.6.3+07e294721 for .NET Framework
+[2.656s] 
+[3.421s]   Checking Build System
+[3.718s]   Building Custom Rule S:/Dev/fonbot_ws/src/fonbot_package/CMakeLists.txt
+[3.875s] Invoked command in 'S:\Dev\fonbot_ws\src\fonbot_package\build\fonbot_package' returned '0': CL=/MP CMAKE_PREFIX_PATH=%CMAKE_PREFIX_PATH%;S:\Dev\fonbot_ws\install\joint_state_publisher_gui;S:\Dev\fonbot_ws\install\joint_state_publisher;S:\Dev\miniforge\envs\ros_env\Library CONDA_PROMPT_MODIFIER=(ros_env) S:\Dev\miniforge\envs\ros_env\Library\bin\cmake.EXE --build S:\Dev\fonbot_ws\src\fonbot_package\build\fonbot_package --config Release
+[3.937s] Invoking command in 'S:\Dev\fonbot_ws\src\fonbot_package\build\fonbot_package': CMAKE_PREFIX_PATH=%CMAKE_PREFIX_PATH%;S:\Dev\fonbot_ws\install\joint_state_publisher_gui;S:\Dev\fonbot_ws\install\joint_state_publisher;S:\Dev\miniforge\envs\ros_env\Library CONDA_PROMPT_MODIFIER=(ros_env) S:\Dev\miniforge\envs\ros_env\Library\bin\cmake.EXE --install S:\Dev\fonbot_ws\src\fonbot_package\build\fonbot_package --config Release
+[3.984s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/config
+[3.984s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/config/empty.yaml
+[3.984s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/description
+[4.000s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/description/robot.urdf.xacro
+[4.000s] -- Installing: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/description/robot_core.xacro
+[4.015s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/launch
+[4.015s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/launch/urdf.launch.py
+[4.015s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/models
+[4.031s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/models/tank-track-asym.dae
+[4.062s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/models/tank_tracks.dae
+[4.062s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/ament_index/resource_index/package_run_dependencies/fonbot_package
+[4.062s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/ament_index/resource_index/parent_prefix_path/fonbot_package
+[4.062s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/environment/ament_prefix_path.bat
+[4.062s] -- Installing: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/environment/ament_prefix_path.dsv
+[4.062s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/environment/path.bat
+[4.062s] -- Installing: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/environment/path.dsv
+[4.078s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/local_setup.bat
+[4.078s] -- Installing: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/local_setup.dsv
+[4.093s] -- Installing: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/package.dsv
+[4.093s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/ament_index/resource_index/packages/fonbot_package
+[4.093s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/cmake/fonbot_packageConfig.cmake
+[4.109s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/cmake/fonbot_packageConfig-version.cmake
+[4.109s] -- Up-to-date: S:/Dev/fonbot_ws/src/fonbot_package/install/fonbot_package/share/fonbot_package/package.xml
+[4.125s] Invoked command in 'S:\Dev\fonbot_ws\src\fonbot_package\build\fonbot_package' returned '0': CMAKE_PREFIX_PATH=%CMAKE_PREFIX_PATH%;S:\Dev\fonbot_ws\install\joint_state_publisher_gui;S:\Dev\fonbot_ws\install\joint_state_publisher;S:\Dev\miniforge\envs\ros_env\Library CONDA_PROMPT_MODIFIER=(ros_env) S:\Dev\miniforge\envs\ros_env\Library\bin\cmake.EXE --install S:\Dev\fonbot_ws\src\fonbot_package\build\fonbot_package --config Release
