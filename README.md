@@ -35,4 +35,4 @@ To run RViz, type one of the following commands:
 - Running specific RViz file: ```rviz2 -d <path to rviz file>```
 
 ## Robot model
-![](https://github.com/StefanJo3107/fonbot_package/blob/master/models/FonbotRViz.gif)
+![](https://github.com/StefanJo3107/fonbot_ros/blob/master/models/FonbotRViz.gif)
