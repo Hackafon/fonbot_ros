@@ -54,9 +54,9 @@
     <!-- LEFT TRACK -->
 
     <joint name="left_track_joint" type="fixed">
-        <parent link="base_link"/>
+        <parent link="chassis"/>
         <child link="left_track"/>
-        <origin xyz="0 0.175 0.075" rpy="0 0 ${pi/2}"/>
+        <origin xyz="0.175 0 0.075" rpy="0 0 0"/>
         <axis xyz="-1 0 0" />
     </joint>
 
@@ -127,9 +127,9 @@
     <!-- RIGHT TRACK -->
 
     <joint name="right_track_joint" type="fixed">
-        <parent link="base_link"/>
+        <parent link="chassis"/>
         <child link="right_track"/>
-        <origin xyz="0 -0.175 0.075" rpy="0 0 ${pi/2}" />
+        <origin xyz="-0.175 0 0.075" rpy="0 0 0" />
         <axis xyz="0 0 -1" />
     </joint>
 
