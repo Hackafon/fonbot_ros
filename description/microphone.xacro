@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:include filename="inertia_macros.xacro" />
+    <joint name="microphone_joint" type="fixed">
+        <parent link="head" />
+        <child link="microphone" />
+    </joint>
+
+    <link name="microphone">
+        <visual>
+            <origin xyz="0 0.08 -0.113" rpy="${pi} ${-3*pi/7} ${pi/2}" />
+            <geometry>
+                <mesh filename="package://fonbot_package/models/microphone.stl" scale="0.008 0.008 0.008" />
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0.08 -0.113" rpy="${pi} ${-3*pi/7} ${pi/2}" />
+            <geometry>
+                <mesh filename="package://fonbot_package/models/microphone.stl" scale="0.008 0.008 0.008" />
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.05" x="0.02" y="0.02" z="0.02">
+            <origin xyz="0 0.08 -0.113" rpy="${pi} ${-3*pi/7} ${pi/2}" />
+        </xacro:inertial_box>
+    </link>
+
+</robot>

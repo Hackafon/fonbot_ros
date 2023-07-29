@@ -2,6 +2,10 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot">
 
     <xacro:include filename="robot_core.xacro" />
-    <xacro:include filename="ultrasonic.xacro" />
-
+    <xacro:include filename="ultrasonic_front.xacro" />
+    <xacro:include filename="ultrasonic_bottom_front.xacro" />
+    <xacro:include filename="ultrasonic_back.xacro" />
+    <xacro:include filename="ultrasonic_bottom_back.xacro" />
+    <xacro:include filename="camera.xacro" />
+    <xacro:include filename="microphone.xacro" />
 </robot>
