@@ -16,7 +16,7 @@ In order to build the package place yourself in your ROS2 workspace and run one 
 
 Once the build has finished, source the package with the following command (make sure you are in root directory of your ROS2 workspace):
 - Windows: ```call install\setup.bat```
-- Linux: ```source install\setup.bat```
+- Linux: ```source install\setup.sh```
 
 ## Running nodes
 In order to run ROS2 node type the following command:
