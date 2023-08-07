@@ -27,7 +27,7 @@ In order to run launch file type the following command:
 ## Other useful commands
 - Listing all ROS2 packages: ```ros2 pkg list```
 - Listing all ROS2 topics: ```ros2 topic list```
-- Generating URDF with xacro: ```ros2 run xacro xacro -o <path for urdf> <path to xacro file>```
+- Generating URDF with xacro (download xacro from [this repository](https://github.com/ros/xacro/tree/ros2)): ```ros2 run xacro xacro -o <path for urdf> <path to xacro file>```
 
 ## RViz visualization
 RViz is a ROS widget that enables us to view our URDF files as 3D models. In order to use RViz, make sure you have joint_state_publisher and joint_state_publisher_gui packages installed in your ROS2 workspace. You can download this packages from [this repository](https://github.com/ros/joint_state_publisher/tree/ros2) (check earlier section on how to build ROS2 package). Every time you start rviz, you should also run joint_state_publisher gui node (check earlier section on how to run nodes). <br>
