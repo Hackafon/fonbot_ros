@@ -20,7 +20,7 @@ Once the build has finished, source the package with the following command (make
 
 ## Running nodes
 In order to run ROS2 node type the following command:
-- ```ros2 run <name of the package> <name of the node>```
+- ```ros2 run <name of the package> <name of the node>```<br>
 In order to run launch file type the following command:
 - ```ros2 launch <name of the package> <launch file>```
 
