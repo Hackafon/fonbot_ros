@@ -5,14 +5,17 @@
   <version>0.0.0</version>
   <description>Main package for FONBot - robot assistant made at FON</description>
   <maintainer email="sjovanovic0831@gmail.com">Stefan</maintainer>
-  <license>TODO: License declaration</license>
+  <license>GPL-2.0 license</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
   <export>
-    <build_type>ament_cmake</build_type>
+    <build_type>ament_python</build_type>
   </export>
 </package>
