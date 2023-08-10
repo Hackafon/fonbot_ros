@@ -1,9 +1,31 @@
 {
     "python.autoComplete.extraPaths": [
+        "s:\\Dev\\fonbot_ws\\install\\xacro\\Lib\\site-packages",
+        "s:\\Dev\\fonbot_ws\\install\\joint_state_publisher_gui\\Lib\\site-packages",
+        "s:\\Dev\\fonbot_ws\\install\\joint_state_publisher\\Lib\\site-packages",
+        "s:\\Dev\\fonbot_ws\\install\\fonbot_package\\Lib\\site-packages",
+        "S:\\Dev\\fonbot_ws\\install\\xacro\\Lib\\site-packages",
+        "S:\\Dev\\fonbot_ws\\build\\joint_state_publisher_gui",
+        "S:\\Dev\\fonbot_ws\\install\\joint_state_publisher_gui\\Lib\\site-packages",
+        "S:\\Dev\\fonbot_ws\\build\\joint_state_publisher",
+        "S:\\Dev\\fonbot_ws\\install\\joint_state_publisher\\Lib\\site-packages",
+        "S:\\Dev\\fonbot_ws\\build\\fonbot_package",
+        "S:\\Dev\\fonbot_ws\\install\\fonbot_package\\Lib\\site-packages",
         "S:\\Dev\\miniforge\\envs\\ros_env\\Library\\lib/site-packages",
         "S:/Dev/miniforge/envs/ros_env\\Lib\\site-packages"
     ],
     "python.analysis.extraPaths": [
+        "s:\\Dev\\fonbot_ws\\install\\xacro\\Lib\\site-packages",
+        "s:\\Dev\\fonbot_ws\\install\\joint_state_publisher_gui\\Lib\\site-packages",
+        "s:\\Dev\\fonbot_ws\\install\\joint_state_publisher\\Lib\\site-packages",
+        "s:\\Dev\\fonbot_ws\\install\\fonbot_package\\Lib\\site-packages",
+        "S:\\Dev\\fonbot_ws\\install\\xacro\\Lib\\site-packages",
+        "S:\\Dev\\fonbot_ws\\build\\joint_state_publisher_gui",
+        "S:\\Dev\\fonbot_ws\\install\\joint_state_publisher_gui\\Lib\\site-packages",
+        "S:\\Dev\\fonbot_ws\\build\\joint_state_publisher",
+        "S:\\Dev\\fonbot_ws\\install\\joint_state_publisher\\Lib\\site-packages",
+        "S:\\Dev\\fonbot_ws\\build\\fonbot_package",
+        "S:\\Dev\\fonbot_ws\\install\\fonbot_package\\Lib\\site-packages",
         "S:\\Dev\\miniforge\\envs\\ros_env\\Library\\lib/site-packages",
         "S:/Dev/miniforge/envs/ros_env\\Lib\\site-packages"
     ]
