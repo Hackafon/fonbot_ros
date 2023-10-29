@@ -124,7 +124,7 @@ class MinimalSubscriber(Node):
         """
         Breaks list in list of lists with n elements 
         ex. from [value_01,value_02,value_03,value_04,value_05,value_06,...] to 
-        [[value_01,value_02,value_03],[value_04,value_05,value_06],...]
+        [[value_01,value_02,value_03],[value_04,value_05,value_06],...] for n=3
 
         Parameters:
         data (np.array): The input list.
