@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'listener = fonbot_ros.subscriber_member_function:main',
+            'camera = fonbot_ros.subscriber_camera:main',
         ],
     },
 )
